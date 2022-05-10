@@ -1,0 +1,48 @@
+//Importando a classe java.util para que seja possível a utilização do Array:
+import java.util.Scanner;
+
+public class ArrayExp {
+    public static void main (String [] args){
+        //Estrutura para declarar um array (String = tipo de dado que será armazenado; frutas = nome escolhido para o array; String[5] = espaço reservado na memória, o tamanho é 5.):
+       String[] frutas = new String[5];
+       //Armazenando elementos dentro do array ( ex. '... [1] = "Maçã"' quer dizer que dentro do array "frutas", no segundo endereço, a string que deverá ser armazenada é "Maçã")
+            frutas [0] = "Banana";
+            frutas [1] = "Maçã";
+            frutas [2] = "Uva";
+            frutas [3] = "Goiaba";
+            frutas [4] = "Manga";
+
+       //Consultando os elementos (Foi escolhido dentro do array qual endereço deveria ser mostrado, ex. [3], e depois "System.out.println" para que o dado armazenado lá, seja exposto na tela);
+       System.out.println("Salada de fruta - Opção 1: ");
+       System.out.println(frutas[3]);
+       System.out.println(frutas[0]);
+       System.out.println(frutas[4]);
+
+       //Alterando um dado dentro do array, basta informar um endereço existente e adicionar o novo dado, ele fará a troca de imediato.
+       frutas [0] = "Pêra";
+       System.out.println();
+       System.out.println("Salada de fruta - Opção 2: ");
+       System.out.println(frutas[3]);
+       System.out.println(frutas[0]);
+       System.out.println(frutas[4]);
+
+        //Impressão apenas para visualizarmos o array por completo
+        System.out.println();
+        System.out.println("Frutas presentes nas saladas - ");
+        System.out.println(frutas[0]);
+        System.out.println(frutas[1]);
+        System.out.println(frutas[2]);
+        System.out.println(frutas[3]);
+        System.out.println(frutas[4]);
+
+       //Deletando dados do array (Define o endereço que deseja excluir e iguala a "null") e vendo como ficou.
+        frutas [4] = null;
+        System.out.println();
+        System.out.println("Frutas presentes nas saladas - ");
+        System.out.println(frutas[0]);
+        System.out.println(frutas[1]);
+        System.out.println(frutas[2]);
+        System.out.println(frutas[3]);
+        System.out.println(frutas[4]);
+    }
+}
