@@ -1,0 +1,22 @@
+// Faça um programa para ler o preço de um produto em cada um dos meses do ano e depois imprimir a média
+// do valor do produto no ano.
+
+import java.util.Scanner;
+public class ExpMediaProduto {
+    public static void main (String [] args){
+        Scanner leitor = new Scanner(System.in);
+
+        double[] Precos = new double[12];
+        for(int i = 0; i < Precos.length; i++){
+            System.out.print("Insira a preço do produto no mês " + (i + 1) + ": ");
+            Precos[i] = leitor.nextDouble();
+        }
+        double Soma = 0;
+        for(int i = 0; i < Precos.length; i++){
+            Soma += Precos[i];
+        }
+
+        double MediaP = Soma/Precos.length;
+        System.out.println("A média de preços durante o ano foi: R$ " + MediaP);
+    }
+}
